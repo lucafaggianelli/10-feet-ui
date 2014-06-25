@@ -73,7 +73,7 @@ bool DatabaseManager::initTables()
                          "name varchar(255), "
                          "description varchar(255), "
                          "icon varchar(255), "
-                         "category int"
+                         "category int, "
                          "type int"
                          ")");
     return sql(createTable);

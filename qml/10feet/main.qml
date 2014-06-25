@@ -1,25 +1,35 @@
 // import QtQuick 1.0 // to target S60 5th Edition or Maemo 5
 import QtQuick 1.1
 
-Rectangle {
+Item {
     id: root
     width: 300
     height: 480
 
-    color: "white"
+    // Side of a cell
+    property int cellSize: 100
 
     onWidthChanged: {
-        deck.anchors.margins = resizeDeck();
+        resizeDeck();
+    }
+
+    Image {
+        id: background
+        anchors.fill: parent
+        source: "background.jpg"
+        fillMode: Image.PreserveAspectCrop
     }
 
     GridView {
         id:deck
 
-        anchors.fill: parent
-        anchors.margins: resizeDeck()
+        width: 200
+        height: 200
+        anchors.centerIn: parent
+        //anchors.margins: resizeDeck()
         clip: true
-        cellHeight: 48
-        cellWidth: 48
+        cellHeight: cellSize
+        cellWidth: cellSize
 
         delegate: ApplicationItem {}
         model: modelApp
@@ -27,6 +37,9 @@ Rectangle {
     }
 
     function resizeDeck() {
-        return (root.width - Math.floor(root.width / 46) * 46) / 2;
+        // TODO fix this shit
+        //deck.count
+        deck.width = Math.floor(root.width / cellSize) * cellSize;
+        deck.height = Math.floor(root.height / cellSize) * cellSize;
     }
 }

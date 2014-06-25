@@ -3,7 +3,6 @@
 #include <QProcess>
 
 #include "qmlapplicationviewer.h"
-#include "database.h"
 #include "listmodel.h"
 #include "DatabaseManager.h"
 #include "ApplicationLauncher.h"
@@ -12,8 +11,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QScopedPointer<QApplication> app(createApplication(argc, argv));
 
-    if (!createConnection())
-        return 1;
+    DatabaseManager* dbManager = DatabaseManager::getInstance();
 
     QmlApplicationViewer viewer;
 
