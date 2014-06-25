@@ -1,4 +1,4 @@
-#include "application_launcher.h"
+#include "ApplicationLauncher.h"
 #include <QMessageBox>
 
 ApplicationLauncher::ApplicationLauncher(QObject *parent) :

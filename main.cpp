@@ -5,7 +5,8 @@
 #include "qmlapplicationviewer.h"
 #include "database.h"
 #include "listmodel.h"
-#include "application_launcher.h"
+#include "DatabaseManager.h"
+#include "ApplicationLauncher.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {

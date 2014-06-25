@@ -35,7 +35,9 @@ QT += xml
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp \
     listmodel.cpp \
-    application_launcher.cpp
+    ApplicationLauncher.cpp \
+    PackageManager.cpp \
+    DatabaseManager.cpp
 
 # Please do not modify the following two lines. Required for deployment.
 include(qmlapplicationviewer/qmlapplicationviewer.pri)
@@ -44,4 +46,7 @@ qtcAddDeployment()
 HEADERS += \
     listmodel.h \
     database.h \
-    application_launcher.h
+    ApplicationLauncher.h \
+    PackageManager.h \
+    DatabaseManager.h \
+    Application.h
