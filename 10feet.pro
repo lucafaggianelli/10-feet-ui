@@ -37,7 +37,8 @@ SOURCES += main.cpp \
     listmodel.cpp \
     ApplicationLauncher.cpp \
     PackageManager.cpp \
-    DatabaseManager.cpp
+    DatabaseManager.cpp \
+    Application.cpp
 
 # Please do not modify the following two lines. Required for deployment.
 include(qmlapplicationviewer/qmlapplicationviewer.pri)

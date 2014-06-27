@@ -6,6 +6,7 @@
 PackageManager::PackageManager()
 {
     dbManager = DatabaseManager::getInstance();
+    Application::fromDesktopFile("ciao");
 }
 
 bool PackageManager::install(Application *app) {

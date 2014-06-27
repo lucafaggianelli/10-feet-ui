@@ -6,6 +6,7 @@
 #include "listmodel.h"
 #include "DatabaseManager.h"
 #include "ApplicationLauncher.h"
+#include "Application.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -38,6 +39,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     //QProcess process;
     //process.start("/usr/bin/nautilus");
+
+    Application::fromDesktopFile("luca");
 
     return app->exec();
 }
